@@ -28,15 +28,9 @@ void Sensors::writeEncoder(int32_t count) {
   encoder.write(count);
 }
 
-// Save current encoder position
-void Sensors::holdEncoder() {
-  encoder.hold();
-  holdValue = encoder.getHoldPosition();
-}
-
 // Get held position
 int32_t Sensors::getHoldPosition() {
-  return holdValue;
+  return encoder.getHoldPosition;
 }
 
 // Get difference from current position to held position
