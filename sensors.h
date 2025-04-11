@@ -24,9 +24,6 @@ public:
     // Write (reset) encoder count
     void writeEncoder(int32_t count);
 
-    // Hold current encoder position
-    void holdEncoder();
-
     // Get the held position
     int32_t getHoldPosition();
 
