@@ -36,6 +36,7 @@ int32_t Sensors::getHoldPosition() {
 }
 
 // Get difference from current position to held position
-int16_t Sensors::getHoldDifference() {
+int32_t Sensors::getHoldDifference() {
   return encoder.getHoldDifference();
 }
+
