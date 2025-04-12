@@ -21,13 +21,7 @@ void Sensors::beginEncoder(uint8_t channel, uint8_t pinA, uint8_t pinB, bool use
 // Return current encoder count
 int32_t Sensors::readEncoder()
 {
-    uint32_t ret32;
-
-    ret32 = channel[_encoder_ch].ENC->UPOS; /* Get upper 16 bits and make a snapshot. */
-    ret32 <<= 16U;
-    ret32 |= channel[_encoder_ch].ENC->LPOSH; /* Get lower 16 bits from hold register. */
-
-    return (int32_t) ret32;
+    return encoder.read();
 }
 
 
